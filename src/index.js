@@ -10,11 +10,11 @@ module.exports = function towelSort (matrix) {
   var sizearray = 0;
   for (var i = 0; i < newarray.length ; i++ ) {   
     temparray = newarray[i];
+    if (sizearray == 0) {sizearray = (newarray.length + 1) *  (newarray.length + 1);}
     if (q == 0) {
       for ( ; q < temparray.length ; q++ ) {                   
         resarray.push( temparray[q] ) ;
         sumel++;
-        if (sizearray == 0) { izearray = newarray.length *  temparray.length }  
       } 
     }
     else {
@@ -26,6 +26,6 @@ module.exports = function towelSort (matrix) {
       q++; 
     }     
   }
-  if ( sumel != sizearray ){ resarray.length = sizearray; }
+  if ( sumel != sizearray ) { resarray.length = resarray.length + 1; }
   return resarray; 
 }
