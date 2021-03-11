@@ -17,7 +17,8 @@ module.exports = function towelSort (matrix) {
       q = temparray.length - 1;
       for (  ; q >= 0 ; q-- ) {                   
           resarray.push( temparray[q] ) ;  
-      } 
+      }
+      q++; 
     }     
   }
   return resarray; 
